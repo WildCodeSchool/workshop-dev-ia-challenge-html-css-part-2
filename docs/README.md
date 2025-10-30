@@ -367,3 +367,11 @@ body {
 #### Précisions complémentaires sur cette analyse
 1. **Hiérarchie et maintenabilité**. L'analyse est correcte. Il est aussi possible d'utiliser le [CSS nesting](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting) pour améliorer la lisibilité.
 2. **Accessibilité des contrastes**. L'analyse est correcte. Le contraste entre le texte gris clair et le fond blanc est en effet un peu faible. Il y a aussi le texte vert clair (`#38a169`) sur fond blanc (`In Stock`) dont le contraste est insuffisant.
+
+## 🛠️ Correction du code
+À toi de jouer !
+
+En suivant les recommandations ci-dessus ainsi que tes propres analyses ou celles vues en groupe, corrige le code HTML et CSS proposé par l'IA.
+
+Si tu le souhaites, tu peux partir d'un code HTML déjà corrigé et ne t'occuper que du CSS. Pour cela, clone cet atelier via le <a href="#input-clone">lien donné en haut de la page ⬆<i class="bi bi-code-slash"></i></a>.  
+Le fichier `index.html` est disponible en racine du dépôt. Il ne te reste plus qu'à écrire le CSS dans le fichier `style.css` (inspire-toi du code CSS initial).
