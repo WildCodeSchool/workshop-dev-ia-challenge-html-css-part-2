@@ -38,7 +38,6 @@ Nettoyage effectué en amont par rapport au [code initial](https://github.com/Wi
 
     <img class="product-image" src="https://picsum.photos/id/0/600/400">
 
-
     <div class="product-info">
       <div class="product-category">HIGH-PERFORMANCE LAPTOP</div>
       <h1 class="product-title">UltraBook Pro X</h1>
@@ -103,13 +102,13 @@ Nettoyage effectué en amont par rapport au [code initial](https://github.com/Wi
    - Le bouton “**Add to Cart**” ne contient pas de texte alternatif pour l’icône du panier.
    - 👉 Amélioration
    ```html
-    <img src="..." alt="UltraBook Pro X laptop front view">
-    <div class="stars" aria-label="Rated 5 out of 5 stars">...</div>
-  ```
+     <img src="..." alt="UltraBook Pro X laptop front view">
+     <div class="stars" aria-label="Rated 5 out of 5 stars">...</div>
+   ```
 
-#### Les erreurs ou imprécisions dans cette analyse  
+#### Les erreurs ou imprécisions dans l'analyse  
 1. **Balises sémantiques**. L'icône `<span class="cart-icon"></span>` dans le bouton "**Add to Cart**" n'a pas besoin de l'attribut `aria-hidden="true"` car l'icône est positionnée uniquement en CSS. Elle est donc déjà ignorée des lecteurs d'écran et ne sera pas lue. Une optimisation CSS pourrait malgré tout être apportée pour supprimer cette balise inutile. 
-2. **Accessibilité**. L'information de l'ancien prix n'est disponible que par la forme (texte barré). Il est donc nécessaire d'ajouter du texte caché pour les lecteurs d'écran, par exemple avec une `<span class="sr-only">` (screen reader only) autour de l'ancien prix.
+2. **Accessibilité**. L'information de l'ancien prix n'est disponible que par la forme (texte barré). Il est donc nécessaire d'ajouter du texte caché pour les lecteurs d'écran, par exemple avec une `<span class="sr-only">` (screen reader only) devant l'ancien prix.
 ```html
 <span class="sr-only">Original price:</span> $2,499
 ```
@@ -364,9 +363,10 @@ body {
 2. Accessibilité des contrastes
    - Certains textes gris clair sur fond blanc (`#718096` sur `#fff`) ont un contraste un peu faible.
 
-#### Précisions complémentaires sur cette analyse
+#### Précisions complémentaires sur l'analyse
 1. **Hiérarchie et maintenabilité**. L'analyse est correcte. Il est aussi possible d'utiliser le [CSS nesting](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting) pour améliorer la lisibilité.
 2. **Accessibilité des contrastes**. L'analyse est correcte. Le contraste entre le texte gris clair et le fond blanc est en effet un peu faible. Il y a aussi le texte vert clair (`#38a169`) sur fond blanc (`In Stock`) dont le contraste est insuffisant.
+3. **Bonne pratique supplémentaire**. Il est recommandé d'utiliser des unités relatives (rem, em, %) plutôt que des unités absolues (px) pour les tailles de police, les marges et les paddings afin d'améliorer l'accessibilité et la réactivité du design.
 
 ## 🛠️ Correction du code
 À toi de jouer !
@@ -374,4 +374,15 @@ body {
 En suivant les recommandations ci-dessus ainsi que tes propres analyses ou celles vues en groupe, corrige le code HTML et CSS proposé par l'IA.
 
 Si tu le souhaites, tu peux partir d'un code HTML déjà corrigé et ne t'occuper que du CSS. Pour cela, clone cet atelier via le <a href="#input-clone">lien donné en haut de la page ⬆<i class="bi bi-code-slash"></i></a>.  
-Le fichier `index.html` est disponible en racine du dépôt. Il ne te reste plus qu'à écrire le CSS dans le fichier `style.css` (inspire-toi du code CSS initial).
+Le fichier `index.html` est disponible en racine du dépôt. Il ne te reste plus qu'à écrire le CSS dans le fichier `style.css`.
+{: .alert-info :}
+
+### **💡 Tips**
+1. inspire-toi du code CSS initial pour gagner du temps ;
+2. une fois le CSS ajouté, tu peux te servir d'une IA pour refactorer ton code en lui demandant d'utiliser des variables CSS, le BEM ou le CSS nesting ;
+3. utilise des outils comme [Contrats Finder](https://app.contrast-finder.org/) pour corriger les problèmes de contraste.
+
+Une solution est disponible sur la [branche solution](https://github.com/WildCodeSchool/workshop-dev-ia-challenge-html-css-part-2/blob/solution/style.css) de ce dépôt.
+
+# 🎁 Aller plus loin
+Reprend la [maquette initiale](https://raw.githubusercontent.com/WildCodeSchool/workshop-dev-ia-challenge-html-css-part-1/refs/heads/main/docs/images/card-mockup.png) de l'atelier [IA Challenge - HTML & CSS - partie 1](https://wildcodeschool.github.io/workshop-dev-ia-challenge-html-css-part-1/) et essai de trouver le prompt optimal pour générer un code HTML et CSS satisfaisant du premier coup avec une IA.
